@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,8 +13,10 @@ public class Main {
                 new Employee(55,"Nikhil","Surat")));
 
         System.out.println(employees);
-        employees.sort(new EmployeeComparator());
-        System.out.println(employees);
+        employees.sort(new EmployeeAddressComparator());
+        System.out.println("Employees sorted address "+employees);
+        employees.sort(new EmployeeNameComparator());
+        System.out.println("Employees sorted name "+employees);
     }
 
 
